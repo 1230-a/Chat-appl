@@ -16,10 +16,17 @@ mongoose.connect("mongodb+srv://admin:P@ssw0rd123@cluster0.upvyl.mongodb.net/use
 
 //Inserting data in the database table
 app.get('/', async (req, res) => {
-    const user = new UsersModel ({
-        username : "user",
+    const utilisateur = new UsersModel ({
+        username : "user2",
         password : "Password123"
-    })
+    });
+
+    try {
+        await utilisateur.save();
+        res.send("data inserted")
+    } catch (err) {
+        console.log(err)
+    }
     
 })
 

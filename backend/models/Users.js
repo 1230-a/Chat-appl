@@ -16,5 +16,5 @@ const UsersSchema = new mongoose.Schema({
 
 //Create this schema if it doesn't exist
 
-const Users = mongoose.model( "UsersData", UsersSchema)
+const Users = mongoose.model( "Users", UsersSchema)
 module.exports = Users
